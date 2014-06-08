@@ -1,13 +1,13 @@
 class Complement
-  TO_RNA =  { 'G' => 'C', 'C' => 'G', 'T' => 'A', 'A' => 'U' }
-  TO_DNA = TO_RNA.invert
+  RNA = 'GCTA'
+  DNA = 'CGAU'
 
   def self.of_dna(dna)
-    dna.gsub!(/#{TO_RNA.keys}/, TO_RNA)
+    dna.tr(RNA, DNA)
   end
 
 
   def self.of_rna(rna)
-    rna.gsub!(/#{TO_DNA.keys}/, TO_DNA)
+    rna.tr(DNA, RNA)
   end
 end
