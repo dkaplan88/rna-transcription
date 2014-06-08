@@ -6,7 +6,6 @@ class Complement
     dna.tr(RNA, DNA)
   end
 
-
   def self.of_rna(rna)
     rna.tr(DNA, RNA)
   end
